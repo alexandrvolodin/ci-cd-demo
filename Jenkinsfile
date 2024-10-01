@@ -10,16 +10,16 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // Выполняем сборку (можно использовать различные команды в зависимости от проекта)
+                // Выполняем сборку
                 echo 'Building project...'
-                sh 'echo Building complete!'
+                bat 'echo Building complete!'
             }
         }
         stage('Test') {
             steps {
-                // Запускаем тесты (в данном случае просто имитируем)
+                // Запускаем тесты
                 echo 'Running tests...'
-                sh 'echo Tests passed!'
+                bat 'echo Tests passed!'
             }
         }
         stage('Deploy') {
