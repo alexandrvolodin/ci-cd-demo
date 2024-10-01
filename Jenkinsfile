@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Забираем код из репозитория
-                git 'https://github.com/alexandrvolodin/ci-cd-demo.git'
+                // Явно указываем ветку для клонирования
+                git branch: 'main', url: 'https://github.com/alexandrvolodin/ci-cd-demo.git'
             }
         }
         stage('Build') {
